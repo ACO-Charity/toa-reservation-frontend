@@ -1,0 +1,34 @@
+.workshop-checkbox {
+  margin-bottom: 20px;
+
+  .background {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #8fbbdc;
+    width: 100%;
+  }
+
+  input[type='checkbox'] {
+    margin-bottom: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .workshop-checkbox-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    margin: 0 0 10px;
+    color: #007bff;
+  }
+
+  p {
+    margin: 10px 0 0;
+    color: #333;
+  }
+}
