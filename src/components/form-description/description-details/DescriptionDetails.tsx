@@ -12,3 +12,4 @@ const DescriptionDetails = (props: DescriptionDetailsProps) => {
 };
 
 export default DescriptionDetails;
+
