@@ -1,4 +1,5 @@
 import DescriptionDetails from '../form-description/description-details/DescriptionDetails';
+import './WorkshopCheckbox.scss'
 
 interface WorkshopCheckboxProps {
     label: string;
@@ -9,17 +10,17 @@ interface WorkshopCheckboxProps {
 const WorkshopCheckbox: React.FC<WorkshopCheckboxProps> = ({label, details, description}) => {
     return (
         <div className="workshop-checkbox">
-            <label>
-                <input type="checkbox"/>
-                <div className="workshop-checkbox-content">
-                    <h3>{label}</h3>
-                    {details.map((detail, index) => (
-                        <DescriptionDetails key={index} category={detail.category} detail={detail.detail}/>
-                    ))}
-                    <p>{description}</p>
-                </div>
-            </label>
+            <div className="workshop-checkbox-content">
+                <input type="checkbox" className="checkbox-box"/>
+                <h3>{label}</h3>
+            </div>
+            {details.map((detail, index) => (
+                <DescriptionDetails key={index} category={detail.category} detail={detail.detail}/>
+            ))}
+            <p>{description}</p>
+
         </div>
+
     );
 };
 
