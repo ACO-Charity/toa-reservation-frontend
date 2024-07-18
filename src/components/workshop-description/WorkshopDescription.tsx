@@ -1,5 +1,6 @@
 import WorkshopCheckbox from './WorkshopCheckbox.tsx';
 import './WorkshopDescription.scss'
+import ReservationWorkshopForm from "../reservation-workshop-form/ReservationWorkshopForm.tsx";
 
 function WorkshopDescription(): JSX.Element {
     const kimchiDetails = [
@@ -40,7 +41,10 @@ function WorkshopDescription(): JSX.Element {
                     details={noodlesDetails}
                     description="Meistern Sie die Kunst der handgezogenen Nudeln, eine beeindruckende Technik der chinesischen Küche. In diesem Workshop lernen Sie die richtigen Handgriffe und Techniken, um elastische und gleichmäßige Nudeln zu ziehen."
                 />
+                <ReservationWorkshopForm/>
             </div>
+
+
         </>
     );
 }
