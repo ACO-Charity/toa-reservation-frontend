@@ -1,5 +1,4 @@
 import DescriptionDetails from '../form-description/description-details/DescriptionDetails';
-import './WorkshopDescription.scss'
 
 interface WorkshopCheckboxProps {
     label: string;

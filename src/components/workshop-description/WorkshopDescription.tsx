@@ -22,10 +22,9 @@ function WorkshopDescription(): JSX.Element {
 
     return (
         <>
-            <div className="background">
-                <div className="workshop-description">
-                    <h2>Wähle bitte mindestens einen Workshop aus</h2>
-                </div>
+            <div className="workshop-background">
+                <h2>Wähle bitte mindestens einen Workshop aus</h2>
+
                 <WorkshopCheckbox
                     label="Kimchi Workshop"
                     details={kimchiDetails}
