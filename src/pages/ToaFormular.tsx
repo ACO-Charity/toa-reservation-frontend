@@ -7,7 +7,6 @@ function ToaFormular() {
     return (
         <>
 
-            <h1>Workshop Reservierung</h1>
             <div className="container-box">
                 <FormDescription/>
                 <WorkshopDescription/>
