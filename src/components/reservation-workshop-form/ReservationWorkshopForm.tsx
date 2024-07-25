@@ -12,6 +12,10 @@ function ReservationWorkshopForm() {
                 <FormField label="Vorname" type="text" name="vorname"/>
                 <FormField label="Nachname" type="text" name="nachname"/>
                 <FormField label="E-Mail" type="email" name="email"/>
+                <FormField label="Ich stimme den AGB und den Datenschutzbestimmungen von ACO Charity e.V. zu."
+                           type="checkbox"
+                           name="terms"/>
+                <input type="submit" value="Jetzt für den Workshop anmelden"/>
             </form>
         </div>
 
