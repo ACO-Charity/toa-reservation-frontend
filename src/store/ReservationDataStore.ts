@@ -10,7 +10,7 @@ interface ReservationDataState {
 
 const initialState: ReservationData = {selectedWorkshops: [], firstName: '', lastName: '', email: ''};
 
-const useReservationData = create<ReservationDataState>((set) => ({
+export const useReservationData = create<ReservationDataState>((set) => ({
     reservationData: structuredClone(initialState),
     updateReservationData: (toUpdate: ReservationData) => set(() => ({reservationData: toUpdate})),
     toggleWorkshop: (workshopType: WorkshopType) => set((prev) => {
