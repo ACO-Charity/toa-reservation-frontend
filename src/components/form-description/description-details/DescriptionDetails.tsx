@@ -1,11 +1,7 @@
 import './DescriptionDetails.scss';
+import {DescriptionDetail} from '../../../model/DescriptionDetail.ts';
 
-export interface DescriptionDetailsProps {
-    category: string;
-    detail: string;
-}
-
-const DescriptionDetails = (props: DescriptionDetailsProps) => {
+const DescriptionDetails = (props: DescriptionDetail) => {
     return (
         <div className="description-details"><strong>{props.category}:</strong><span>{props.detail}</span></div>
     );
