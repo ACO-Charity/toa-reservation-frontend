@@ -1,34 +1,41 @@
+:root {
+  --primary-color : #1E74D9;
+}
+
+
 html {
-  background: white;
-  font-family: 'Inter', sans-serif;
+  background  : white;
+  font-family : 'Inter', sans-serif;
+}
+
+h1, h3 {
+  color : var(--primary-color)
 }
 
 h1 {
-  color: #1E74D9;
-  font-size: 40px;
-  margin: 0;
+  font-size : 40px;
+  margin    : 0;
 }
 
 h2 {
-  color: black;
-  font-size: 23px;
+  color     : black;
+  font-size : 23px;
 }
 
 h3 {
-  color: #1E74D9;
-  font-size: 18px;
+  font-size : 18px;
 }
 
 h4 {
-  font-size: 16px;
-  color: black;
+  font-size : 16px;
+  color     : black;
 }
 
 p {
-  font-size: 16px;
+  font-size : 16px;
 }
 
 .container-box {
-  display: flex;
-  justify-content: space-between;
+  display         : flex;
+  justify-content : space-between;
 }

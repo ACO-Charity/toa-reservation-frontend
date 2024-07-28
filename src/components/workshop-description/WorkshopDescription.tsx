@@ -4,7 +4,7 @@ import ReservationWorkshopForm from '../reservation-workshop-form/ReservationWor
 import WorkshopCheckbox from './WorkshopCheckbox.tsx';
 import './WorkshopDescription.scss';
 
-function WorkshopDescription(): JSX.Element {
+const WorkshopDescription = () => {
     const descriptions: WorkshopDetails[] = [
         {
             type: WorkshopType.KIMCHI,
@@ -45,6 +45,6 @@ function WorkshopDescription(): JSX.Element {
 
         </>
     );
-}
+};
 
 export default WorkshopDescription;

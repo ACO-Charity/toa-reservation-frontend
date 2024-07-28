@@ -1,22 +1,47 @@
-import '../workshop-description/WorkshopDescription.scss'
-import '../reservation-workshop-form/form-field/FormField.tsx'
-import FormField from "./form-field/FormField.tsx";
+import {useState} from 'react';
+import {useReservationData} from '../../store/ReservationDataStore.ts';
+import Button from '../common/button/Button.tsx';
+import Checkbox from '../common/checkbox/Checkbox.tsx';
+import './ReservationWorkshopForm.scss';
+import TextInput from '../common/text-input/TextInput.tsx';
 
 function ReservationWorkshopForm() {
+    const {reservationData, updateReservationData} = useReservationData();
+    const [privacyChecked, setPrivacyChecked] = useState(false);
+    const submitLabel = 'Jetzt für den Workshop anmelden';
+
+    const handleChangePersonalInfo = (key: 'firstName' | 'lastName' | 'email') => {
+        return (value: string) => {
+            const newReservationData = {
+                ...reservationData,
+                [key]: value
+            };
+            updateReservationData(newReservationData);
+        };
+    };
+
+    const submit = () => {
+        console.debug('reservationData', reservationData);
+        console.debug('privacyChecked', privacyChecked);
+    };
 
     return (
         <div>
             <h2>Bitte gebe folgende Daten ein, um dich für den
                 Workshop anzumelden</h2>
-            <form>
-                <FormField label="Vorname" type="text" name="vorname"/>
-                <FormField label="Nachname" type="text" name="nachname"/>
-                <FormField label="E-Mail" type="email" name="email"/>
-                <FormField label="Ich stimme den AGB und den Datenschutzbestimmungen von ACO Charity e.V. zu."
-                           type="checkbox"
-                           name="terms"/>
-                <input type="submit" value="Jetzt für den Workshop anmelden"/>
-            </form>
+            <div className="form-fields">
+                <TextInput label="Vorname" value={reservationData.firstName}
+                           onChange={handleChangePersonalInfo('firstName')}/>
+                <TextInput label="Nachname" value={reservationData.lastName}
+                           onChange={handleChangePersonalInfo('lastName')}/>
+                <TextInput label="E-Mail" isEmail value={reservationData.email}
+                           onChange={handleChangePersonalInfo('email')}/>
+
+                <Checkbox onChange={setPrivacyChecked}
+                          value={privacyChecked}
+                          label="Ich stimme  den Datenschutzbestimmungen von ACO Charity e.V. zu."/>
+                <Button label={submitLabel} onClick={submit}/>
+            </div>
         </div>
 
     );
