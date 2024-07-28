@@ -1,5 +1,5 @@
 import DescriptionDetails from '../form-description/description-details/DescriptionDetails';
-import './WorkshopCheckbox.scss'
+import './WorkshopCheckbox.scss';
 
 interface WorkshopCheckboxProps {
     label: string;
@@ -7,7 +7,7 @@ interface WorkshopCheckboxProps {
     description: string;
 }
 
-const WorkshopCheckbox: React.FC<WorkshopCheckboxProps> = ({label, details, description}) => {
+const WorkshopCheckbox = ({label, details, description}: WorkshopCheckboxProps) => {
     return (
         <div className="workshop-checkbox">
             <div className="workshop-checkbox-content">
