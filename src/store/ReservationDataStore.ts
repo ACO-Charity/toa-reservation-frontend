@@ -2,7 +2,7 @@ import {create} from 'zustand';
 import {WorkshopType} from '../enum/WorkshopType.ts';
 import {ReservationData} from '../model/ReservationData.ts';
 
-interface ReservationDataState {
+interface ReservationDataStore {
     reservationData: ReservationData;
     updateReservationData: (toUpdate: ReservationData) => void;
     toggleWorkshop: (workshopType: WorkshopType) => void;
@@ -10,7 +10,7 @@ interface ReservationDataState {
 
 const initialState: ReservationData = {selectedWorkshops: [], firstName: '', lastName: '', email: ''};
 
-export const useReservationData = create<ReservationDataState>((set) => ({
+export const useReservationStore = create<ReservationDataStore>((set) => ({
     reservationData: structuredClone(initialState),
     updateReservationData: (toUpdate: ReservationData) => set(() => ({reservationData: toUpdate})),
     toggleWorkshop: (workshopType: WorkshopType) => set((prev) => {

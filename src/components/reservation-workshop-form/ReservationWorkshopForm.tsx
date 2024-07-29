@@ -1,12 +1,15 @@
 import {useState} from 'react';
-import {useReservationData} from '../../store/ReservationDataStore.ts';
+import {useShallow} from 'zustand/react/shallow';
+import {useReservationStore} from '../../store/ReservationDataStore.ts';
 import Button from '../common/button/Button.tsx';
 import Checkbox from '../common/checkbox/Checkbox.tsx';
 import './ReservationWorkshopForm.scss';
 import TextInput from '../common/text-input/TextInput.tsx';
 
 function ReservationWorkshopForm() {
-    const {reservationData, updateReservationData} = useReservationData();
+    const {reservationData, updateReservationData} = useReservationStore(
+        useShallow(store => ({reservationData: store.reservationData, updateReservationData: store.updateReservationData}))
+    );
     const [privacyChecked, setPrivacyChecked] = useState(false);
     const submitLabel = 'Jetzt für den Workshop anmelden';
 

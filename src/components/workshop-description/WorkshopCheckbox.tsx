@@ -1,7 +1,8 @@
+import {useShallow} from 'zustand/react/shallow';
 import {WorkshopType} from '../../enum/WorkshopType.ts';
 import {DescriptionDetail} from '../../model/DescriptionDetail.ts';
 import {WorkshopDetails} from '../../model/WorkshopDetails.ts';
-import {useReservationData} from '../../store/ReservationDataStore.ts';
+import {useReservationStore} from '../../store/ReservationDataStore.ts';
 import DescriptionDetails from '../form-description/description-details/DescriptionDetails';
 import './WorkshopCheckbox.scss';
 
@@ -10,7 +11,9 @@ interface WorkshopCheckboxProps {
 }
 
 const WorkshopCheckbox = ({workshopDetail}: WorkshopCheckboxProps) => {
-    const {reservationData, toggleWorkshop} = useReservationData();
+    const {reservationData, toggleWorkshop} = useReservationStore(
+        useShallow(store => ({reservationData: store.reservationData, toggleWorkshop: store.toggleWorkshop}))
+    );
     const checked = reservationData.selectedWorkshops.includes(workshopDetail.type);
 
     const details: DescriptionDetail[] = [
