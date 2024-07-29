@@ -38,17 +38,16 @@ const WorkshopCheckbox = ({workshopDetail}: WorkshopCheckboxProps) => {
 
     return (
         <div className="workshop-checkbox">
-            <div className="workshop-checkbox-content">
-                <input type="checkbox" className="checkbox-box"
-                       onChange={toggleCheckbox}
-                       checked={checked}/>
+            <input type="checkbox" className="aco-checkbox"
+                   onChange={toggleCheckbox}
+                   checked={checked}/>
+            <div className="workshop-content">
                 <h3>{getLabelByWorkshopType(workshopDetail.type)}</h3>
+                {details.map((detail, index) => (
+                    <DescriptionDetails key={index} category={detail.category} detail={detail.detail}/>
+                ))}
+                <p>{workshopDetail.description}</p>
             </div>
-            {details.map((detail, index) => (
-                <DescriptionDetails key={index} category={detail.category} detail={detail.detail}/>
-            ))}
-            <p>{workshopDetail.description}</p>
-
         </div>
 
     );

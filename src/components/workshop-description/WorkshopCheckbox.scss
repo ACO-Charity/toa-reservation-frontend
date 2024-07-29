@@ -1,7 +1,21 @@
-.workshop-checkbox-content {
-  display: flex;
-}
+.workshop-checkbox {
+  display               : grid;
+  grid-template-columns : 40px 1fr;
+  gap                   : 1rem;
+  align-items           : flex-start;
 
-.checkbox-box {
-  margin-right: 10px;
+  .workshop-content {
+    display        : flex;
+    flex-direction : column;
+
+    h3 {
+      margin : 0 0 0.5rem;
+    }
+  }
+
+  .aco-checkbox {
+    $size  : 28px;
+    width  : $size;
+    height : $size;
+  }
 }
