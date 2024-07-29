@@ -1,19 +1,15 @@
-import FormDescription from "../components/form-description/FormDescription.tsx";
-import WorkshopDescription from "../components/workshop-description/WorkshopDescription.tsx";
+import FormDescription from '../components/form-description/FormDescription.tsx';
+import WorkshopDescription from '../components/workshop-description/WorkshopDescription.tsx';
+import './ToaFormular.scss';
 
 function ToaFormular() {
 
-
     return (
-        <>
-
-            <div className="container-box">
-                <FormDescription/>
-                <WorkshopDescription/>
-            </div>
-        </>
-    )
+        <div className="toa-formular">
+            <FormDescription/>
+            <WorkshopDescription/>
+        </div>
+    );
 }
 
-
-export default ToaFormular
+export default ToaFormular;

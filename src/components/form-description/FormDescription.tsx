@@ -1,4 +1,5 @@
 import DescriptionDetails from './description-details/DescriptionDetails.tsx';
+import './FormDescription.scss';
 
 function FormDescription() {
 

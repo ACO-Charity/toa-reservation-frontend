@@ -1,0 +1,20 @@
+.toa-formular {
+  display               : grid;
+  grid-template-columns : 0.4fr 0.6fr;
+  padding               : 40px;
+  gap                   : 20px;
+
+  .form-description {
+    box-sizing : border-box;
+  }
+
+  .workshop-background {
+    box-sizing : border-box;
+  }
+}
+
+@media only screen and (max-width : 769px) {
+  .toa-formular {
+    grid-template-columns : 1fr;
+  }
+}

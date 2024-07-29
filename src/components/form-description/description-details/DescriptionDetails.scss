@@ -1,12 +1,4 @@
 .description-details {
-  display: grid;
-  grid-template-columns: 70px  1fr;
-}
-
-.form-description {
-  width: 60%;
-  padding: 40px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
+  display               : grid;
+  grid-template-columns : 70px  1fr;
 }
