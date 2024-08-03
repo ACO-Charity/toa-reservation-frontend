@@ -1,0 +1,66 @@
+.form-field {
+  margin-top: 50px; // Abstand zwischen Datenschutz und E-Mail Feld
+  margin-bottom: 20px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-input {
+  margin-right: 10px; // Abstand zwischen Checkbox und Text
+}
+
+.checkbox-text {
+  font-size: 14px;
+}
+
+// button
+
+button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #1E74D9;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+// formfields
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #1E74D9;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+.form-field label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-field input[type="text"]::placeholder,
+.form-field input[type="email"]::placeholder {
+  color: #999;
+  font-style: italic;
+}
